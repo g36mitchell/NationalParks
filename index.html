@@ -13,19 +13,19 @@
         <h1>National Park finder</h1>
 
         <form id="js-form">
-            <label for="search-term">Search states
-            <input required type="text" name="search-term" id="js-search-term" title="Enter two letter state codes." placeholder="example - TX, OK, LA"  pattern="T[NX]+|A[LRK]+" >
+            <label for="search-term">Search states (using state codes)
+            <input required type="text" name="search-term" id="js-search-term" title="Enter two letter state codes." placeholder="example - TX, OK, LA" >
          <!--   pattern="/\bA[KLRZ]|C[TOA]|D[CE]|FL|GA|HI|I[ADLN]|K[YS]|LA|M[AESTNOI]|N[EDHJYCMV]|O[HRK]|PA|RI|S[CD]|T[NX]|UT|V[AT]|W[AIY]+/" -->
             </label>
             <label for="max-results">Maximum results to return
-            <input type="number" name="max-results" id="js-max-results" value="10" title="Enter the number of parks." required>
+            <input type="number" name="max-results" id="js-max-results" value="10" title="Enter the number of parks." min="1" max="300" required>
             </label>
             <input type="submit" value="Find parks!">
         </form>
 
         <p id="js-error-message" class="error-message"></p>
         <section id="results" class="hidden">
-            <h2>Search results</h2>
+            <h2>Search results (alphabetical)</h2>
             <div id="results-list">
             </div>
         </section>
