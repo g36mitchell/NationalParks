@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>National Park finder</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>National Park finder</h1>
+
+        <form id="js-form">
+            <label for="search-term">Search states
+            <input required type="text" name="search-term" id="js-search-term" title="Enter two letter state codes." placeholder="example - TX, OK, LA"  pattern="T[NX]+|A[LRK]+" >
+         <!--   pattern="/\bA[KLRZ]|C[TOA]|D[CE]|FL|GA|HI|I[ADLN]|K[YS]|LA|M[AESTNOI]|N[EDHJYCMV]|O[HRK]|PA|RI|S[CD]|T[NX]|UT|V[AT]|W[AIY]+/" -->
+            </label>
+            <label for="max-results">Maximum results to return
+            <input type="number" name="max-results" id="js-max-results" value="10" title="Enter the number of parks." required>
+            </label>
+            <input type="submit" value="Find parks!">
+        </form>
+
+        <p id="js-error-message" class="error-message"></p>
+        <section id="results" class="hidden">
+            <h2>Search results</h2>
+            <div id="results-list">
+            </div>
+        </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
