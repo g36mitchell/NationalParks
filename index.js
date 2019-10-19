@@ -35,6 +35,7 @@ function displayResults(responseJson) {
 
   // if there are previous results, remove them
   $('#results-list').empty();
+  $('#js-error-message').empty();
 
   // iterate through the items array
   for (let i = 0; i < responseJson.data.length; i++){
